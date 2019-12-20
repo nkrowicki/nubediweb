@@ -20,8 +20,15 @@
     var scrollDistance = $(this).scrollTop();
     if (scrollDistance > 100) {
       $('.scroll-to-top').fadeIn();
+      if($('#scroll-to-top').css('display')=='block'){
+
+        $('.float').css({"bottom": "80px", "right": "16px"}); 
+      }
+     
     } else {
       $('.scroll-to-top').fadeOut();
+      $('.float').css({"bottom": "40px", "right": "40px"}); 
+
     }
   });
 
